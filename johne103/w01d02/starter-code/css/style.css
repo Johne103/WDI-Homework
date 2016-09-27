@@ -1,0 +1,45 @@
+/*body {
+  background: white;
+}*/
+
+/*#top-area {
+  background-color: :black;
+  height: 100px;
+  width: 100px;
+}*/
+body {
+  background-image: url("../images/bgtile.png");
+  background-repeat: repeat-x;
+}
+
+img {
+  width: 400px;
+  height: 500px;
+  margin:150px 0 0 0;
+  float: left;
+}
+
+h1 {
+  height: 50px;
+  width: 90px;
+  float: left;
+}
+
+h2 {
+  height: 50px;
+  width: 90px;
+}
+
+p {
+  float: left;
+}
+
+#phone {
+/*background-image: url("../images/phone.png");*/
+height: 300px;
+width: 200px;
+}
+
+div {
+  display: block;
+}
