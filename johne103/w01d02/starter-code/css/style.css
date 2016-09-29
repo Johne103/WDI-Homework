@@ -15,7 +15,7 @@ body {
 img {
   width: 400px;
   height: 500px;
-  margin:150px 0 0 0;
+  margin:200px 0 0 0;
   float: left;
 }
 
@@ -31,15 +31,35 @@ h2 {
 }
 
 p {
-  float: left;
+  text-align: center;
 }
 
 #phone {
 /*background-image: url("../images/phone.png");*/
-height: 300px;
+height: 400px;
 width: 200px;
+border-style: solid;
+border-color: black;
+border-width: 1px;
 }
 
+#brand {
+/*background-image: url("../images/phone.png");*/
+/*height: 20px;
+width: 100px;*/
+border-style: : solid;
+border-color: black;
+border-width: 5px;
+}
+
+#frame {
+/*background-image: url("../images/phone.png");*/
+height: 100px;
+width: 100px;
+border-style: solid;
+border-color: black;
+border-width: 5px;
+}
 div {
   display: block;
 }
