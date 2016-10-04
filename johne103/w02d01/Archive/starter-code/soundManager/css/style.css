@@ -1,0 +1,30 @@
+body {
+  background-color: black;
+}
+
+h1 {
+  font-family: sans-serif;
+  color: red;
+  text-align: center;
+}
+
+ol {
+  list-style: none;
+  width: 500px;
+  margin: auto;
+
+}
+
+ol li {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: 1px solid;
+  color: gray;
+  vertical-align: top;
+  margin-right: -4px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 100px;
+
+}
