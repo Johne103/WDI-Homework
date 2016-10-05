@@ -16,7 +16,7 @@ switch (operation) {
   parseInt("answer");
   alert (answer);
   console.log(answer);
-  break
+  break;
 
   case '+':
 
@@ -28,7 +28,7 @@ switch (operation) {
   parseInt("answer");
   alert (answer);
   console.log(answer);
-  break
+  break;
 
   case '-':
   var secondinput = prompt ("Please enter your second number");
@@ -38,7 +38,7 @@ switch (operation) {
   parseInt("answer");
   alert (answer);
   console.log(answer);
-  break
+  break;
 
   case '/':
   var secondinput = prompt ("Please enter your second number");
@@ -48,7 +48,7 @@ switch (operation) {
   parseInt("answer");
   alert (answer);
   console.log(answer);
-  break
+  break;
 
   case '*':
   var secondinput = prompt ("Please enter your second number");
@@ -58,7 +58,7 @@ switch (operation) {
   parseInt("answer");
   alert (answer);
   console.log(answer);
-  break
+  break;
 
   case 'p':
   var secondinput = prompt ("Please enter your second number");
@@ -68,7 +68,7 @@ switch (operation) {
   parseInt("answer");
   alert (answer);
   console.log(answer);
-  break
+  break;
 
   default:
   alert ("Please enter a valid number");

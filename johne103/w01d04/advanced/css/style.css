@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  font-family: Helvetica, arial, sans-serif;
+}
+
+.wrapper {
+  width:400px;
+  margin:auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 30px;
+}
+
+form input {
+  width: 22%;
+  margin:0 1% 10px 1%;
+  padding: 20px;
+  display: inline-block;
+}
+
+form input.big0 {
+  width: 72%;
+}
+
+form input[type='submit'] {
+  border:0px;
+  width:47%;
+  text-transform: uppercase;
+}
+
+form input#result {
+  border:0px;
+  width:47%;
+  text-transform: uppercase;
+  font-size: 30px;
+}

@@ -25,6 +25,7 @@ for (var i = 0; i<squares.length; i++)
 
        return checkSquares(col1)||checkSquares(col2)||checkSquares(col3);
      }
+     console.log(checkSquares(col1));
 
      function checkRows () {
        var row1 = [squares[0], squares[2], squares[3]];

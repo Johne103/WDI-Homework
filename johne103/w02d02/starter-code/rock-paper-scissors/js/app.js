@@ -4,6 +4,8 @@ var scissorsBtn = document.getElementById("scissors");
 
 var userChoice = "";
 var cpuChoice = "";
+var cpuPick = "";
+var pick = "";
 
 var userScore = [];
 var cpuScore = [];
@@ -16,45 +18,53 @@ scissorsBtn.addEventListener("click", setUserChoice);
 function setUserChoice() {
   var userChoice = this.id;
   console.log("user " + this.id);
-  var cpuChoice = getCpuChoice();
-  console.log("cpu " + cpuChoice);
-  var theResult = getWinner();
+
+  var pick = parseInt(Math.floor(Math.random()*3) + 1);
+  console.log("pick " + pick);
+  var cpuChoice = setCpuChoice();
+  console.log("cpu " + cpuPick);
+
+  var theResult = getWinner(userChoice, cpuChoice);
   console.log("result " + theResult);
 }
 
-function getWinner () {
-  if (userChoice == "rock" && cpuChoice == "rock" || userChoice == "paper" && cpuChoice == "paper" || userChoice == "scissors" && cpuChoice == "scissors") {
-      result = "It's a Draw";
-      console.log("draw");
-  } else if (userChoice == "rock" && cpuChoice == "paper" || userChoice == "paper" && cpuChoice == "scissors" || userChoice == "scissors" && cpuChoice == "rock") {
-      result = "Bot Has Won";
-      cpuScore++;
+
+//(userChoice && cpuChoice == "rock" || userChoice && cpuChoice == "paper" || userChoice && cpuChoice == "scissors")
+
+
+function getWinner (a, b) {
+  console.log(a, b);
+  if ((a == "rock" && b == "scissors") || (a == "paper" && b == "rock" )|| (a == "scissors" && b == "paper"))  {
+      document.getElementById("You").textContent = userScore;
+      userScore++;
+      document.getElementById("theResult").textContent = "Hurray! You Have Won";
+      console.log("user wins");
+  } else if ((b == "rock" && a == "scissors") || (b == "paper" && a == "rock") || (b == "scissors" && a == "paper")) {
       document.getElementById("Bot").textContent = cpuScore;
+      cpuScore++;
+      document.getElementById("theResult").textContent = "Sorry! Bot Has Won";
       console.log("Bot wins");
   } else {
-      result = "You Have Won";
-      userScore++;
-      document.getElementById("You").textContent = userScore;
-      console.log("user wins");
+      document.getElementById("theResult").textContent = "It's a Draw";
+      console.log("draw");
   }
 }
 
-randomNumber = Math.floor(Math.random()*3) + 1;
-console.log("random " + randomNumber);
 
-function getCpuChoice() {
-  selectCpuChoice = Math.floor(Math.random()*3) + 1;
-  if (selectCpuChoice === 1) {
-    setCpuChoice = "rock" ;
-  } else if (selectCpuChoice === 2) {
-    setCpuChoice = "paper"; }
+
+function setCpuChoice() {
+
+  if (pick == 1) {
+    cpuPick = "rock" ;
+  } else if (pick == 2) {
+    cpuPick = "paper"; }
       else {
-        setCpuChoice = "scissors";}
+        cpuPick = "scissors";}
 
-    return setCpuChoice;
+    return cpuPick;
 
-  //cpuChoice = ""; // rock paper or scissors
+
 }
-var cpuChoice = getCpuChoice();
-console.log(cpuChoice);
-console.log(userChoice);
+// var cpuChoice = setCpuChoice();
+// console.log(cpuChoice);
+// console.log(userChoice);
