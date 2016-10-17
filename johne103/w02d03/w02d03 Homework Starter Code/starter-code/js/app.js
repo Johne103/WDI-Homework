@@ -30,11 +30,11 @@ $(function() {
     '</div>' +
     '</div>' +
     '</li>');
-    //$ul.append('<li><h3>' + teamMember.firstname + " " + teamMember.lastname +'</h3><p>' +  teamMember.role + '</p></li>');
 
-
-    // $("#new-tweet-form").submit(function(){
-    //   var $charInput = $(("#new-tweet-input").value);
+    $("#new-tweet-form").submit(function(){
+       var $charInput = $(("new-tweet-input").value);
+       console.log($("new-tweet-input").value);
+     });
     //
     // $ol.prepend('<li class="stream-item">'+
     // '<div class="tweet">'+

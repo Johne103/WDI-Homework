@@ -19,7 +19,7 @@ function setUserChoice() {
   var userChoice = this.id;
   console.log("user " + this.id);
 
-  var pick = parseInt(Math.floor(Math.random()*3) + 1);
+
   console.log("pick " + pick);
   var cpuChoice = setCpuChoice();
   console.log("cpu " + cpuPick);
@@ -53,7 +53,7 @@ function getWinner (a, b) {
 
 
 function setCpuChoice() {
-
+  var pick = parseInt(Math.floor(Math.random()*3) + 1);
   if (pick == 1) {
     cpuPick = "rock" ;
   } else if (pick == 2) {

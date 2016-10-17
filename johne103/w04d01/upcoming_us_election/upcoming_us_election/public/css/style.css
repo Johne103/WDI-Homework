@@ -1,0 +1,23 @@
+main {
+  padding-top: 30px;
+}
+
+h1 {
+  color: red;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card-img-top1 {
+opacity: 1;
+}
+
+.card-img-top2 {
+opacity: .5;
+}
+
+.card-img-top3 {
+opacity: .1;
+}
