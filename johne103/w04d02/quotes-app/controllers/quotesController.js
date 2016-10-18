@@ -1,11 +1,11 @@
 let quotes = require("../data/quotes");
 
-function indexIndex(req, res){
-  res.render('index', { quotes });
-}
+// function indexIndex(req, res){
+//   res.render('index', { quotes });
+// }
 
 function quotesIndex(req, res){
-  res.render('quotes/index2', { quotes });
+  res.render('quotes/index', { quotes });
 }
 
 function quotesNew(req, res) {
@@ -49,8 +49,7 @@ function quotesDelete(req, res){
 }
 
 module.exports = {
-  index:  indexIndex,
-  index2: quotesIndex,
+  index:  quotesIndex,
   new:    quotesNew,
   create: quotesCreate,
   show:   quotesShow,
