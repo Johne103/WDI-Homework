@@ -1,0 +1,8 @@
+main {
+  max-width: 960px;
+  background-image: url(../images/road-to-tree.jpg);
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center;
+  font-family: 'Work Sans', sans-serif;
+}

@@ -4,7 +4,7 @@ const quotesController = require("../controllers/quotesController");
 
 // root path
 router.get("/" ,(req, res) => {
-  res.redirect(302, "/quotes");
+  res.redirect(302, "/index");
 });
 
 // Food Restful routes
