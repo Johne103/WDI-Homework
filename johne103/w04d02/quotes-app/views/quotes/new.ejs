@@ -1,16 +1,16 @@
 <h1>Add Quote</h1>
-<form method="post" action="/quotes">
-  <label for="quote_name">Name</label>
-  <input type="text" name="quote[name]" id="quote_name">
+<form action="/quotes" method="post">
 
-  <label for="quote_quickQuotes">quickQuotes</label>
-  <select name="quote[quickQuotes]" id="quote_quickQuotes">
-    <option value="meh">meh</option>
-    <option value="Sure!">Sure!</option>
-    <option value="Depending">Depending...</option>
-    <option value="omg">omg</option>
-    <option value="quite">quite</option>
-  </select>
+  <div class="form-group">
+      <label for="quote_name">Quote</label>
+      <input type="text" name="quote[name]" id="quote_name" class="form-control">
+    </div>
 
-  <input class="btn" type="submit" value="Add">
+    <div class="form-group">
+      <label for="quote_author">Author</label>
+      <input type="text" name="quote[author]" id="quote_author" class="form-control">
+    </div>
+
+    <button class="btn" >Create</button>
+
 </form>
