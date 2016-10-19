@@ -1,0 +1,22 @@
+body {
+  max-width: 960px;
+  margin: 0 auto;
+  background-image: url(../images/backgdino.jpeg);
+  background-size: cover;
+  background-position: center;
+
+}
+
+
+main {
+
+  padding-top: 30px;
+}
+
+div.buttons {
+  margin-top: 15px;
+}
+
+form.delete {
+  display: inline;
+}

@@ -1,0 +1,13 @@
+<h1>Edit Dinos</h1>
+
+<form action="/tindersaurus/<%= tindersaurus.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+
+  <label for="tinder_name">Name</label>
+  <input type="text" name="tinder[name]" id="tinder_name" value="<%= tinder.name %>">
+
+  <label for="tinder_age">Citation</label>
+  <input type="text" name="tinder[age]" id="tinder_age" value="<%= tinder.age %>">
+
+  <button>Update</button>
+</form>
