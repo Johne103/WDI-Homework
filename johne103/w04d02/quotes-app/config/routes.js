@@ -14,7 +14,7 @@ router.route("/quotes")
   .post(quotesController.create);
 
 router.route("/quotes/new")
-  .get(quotesController.create);
+  .get(quotesController.new);
 
 router.route("/quotes/:id")
   .get(quotesController.show)
