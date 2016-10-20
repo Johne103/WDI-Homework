@@ -5,7 +5,7 @@ const tinderController = require('../controllers/tindersaurusController');
 router.get('/', (req, res) => res.render('home'));
 
 // INDEX & CREATE
-router.route('/tindersaurus')
+router.route('/tindersaurus/index')
   .get(tinderController.index)
   .post(tinderController.create);
 
@@ -22,6 +22,5 @@ router.route('/tindersaurus/:urlId')
 
   // EDIT
 router.get('/tindersaurus/:urlId/edit', tinderController.edit);
-router.get('/tindersaurus/:urlId', tinderController.show);
 
 module.exports = router;

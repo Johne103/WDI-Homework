@@ -1,10 +1,14 @@
 <h1>Show Dino</h1>
 
-<h2><%= Tinder.Name %></h2>
-<h2><%= Tinder.Age %></h2>
+<h2><%= tinder.name %></h2>
+<h2><%= tinder.age %></h2>
+<h2><%= tinder.species %></h2>
+<h2><%= tinder.image %></h2>
+<h2><%= tinder.population %></h2>
+<h2><%= tinder.foodType %></h2>
 
-<a href="/tindersaurus/<%= tindersaurus.id %>/edit">Edit</a>
-<form action="/tindersaurus/<%= tindersaurus.id %>" method="post">
+<a href="/tindersaurus/<%= tinder.id %>/edit">Edit</a>
+<form action="/tindersaurus/<%= tinder.id %>" method="post">
   <input type="hidden" name="_method" value="delete">
   <button>Delete</button>
 </form>

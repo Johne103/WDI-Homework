@@ -1,6 +1,10 @@
 <h1>Dinos</h1>
 
-<% tinder.forEach((tinder) => { %>
-  <h2><a href="/tindersaurus/<%= tindersaurus.id %>"><%= tinder.name %></a></h2>
+<% tinders.forEach((tinder) => { %>
+  <h2><a href="/tindersaurus/<%= tinder.id %>"><%= tinder.name %></a></h2>
   <h3><%= tinder.age %></h3>
+  <h3><%= tinder.species %></h3>
+  <h3><%= tinder.image %></h3>
+  <h3><%= tinder.population %></h3>
+  <h3><%= tinder.foodType %></h3>
 <% }) %>

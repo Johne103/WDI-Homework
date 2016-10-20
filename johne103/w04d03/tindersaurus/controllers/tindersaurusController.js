@@ -2,9 +2,9 @@ const Tinder = require('../models/tindersaurus');
 
 //INDEX
 function tinderIndex(req, res){
-  Tinder.find({}, (err, tinder) => {
-    if(err) return res.status(500).send("500: Server Error");
-    res.render('tindersaurus/index', { tinder });
+  Tinder.find({}, (err, tinders) => {
+    if(err) return res.status(500).send("500: Server Error (tinderIndex)");
+    res.render('tindersaurus/index', { tinders });
   });
 }
 
@@ -15,9 +15,9 @@ function tinderNew(req, res){
 
 //CREATE
 function tinderCreate(req, res) {
-  Tinder.create(req.body.Tinder, (err, tinder) => {
-    if(err) return res.status(500).send("500: Server Error");
-    res.redirect(301, '/tindersaurus');
+  Tinder.create(req.body.tinder, (err, tinder) => {
+    if(err) return res.status(500).send("500: Server Error (tinderCreate)");
+    res.redirect(301, '/tindersaurus/index');
   });
 }
 
@@ -31,15 +31,16 @@ function tinderShow(req, res) {
 
 //EDIT
 function tinderEdit(req, res) {
-  Quote.findById(req.params.urlId, (err, quote) => {
-    if(err) return res.status(500).send("500: Server Error");
-    res.render('tindersaurus/edit', { quote });
+  Tinder.findById(req.params.urlId, (err, tinder) => {
+    console.log("err:", err);
+    if(err) return res.status(500).send("500: Server Error (tinderEdit)");
+    res.render('tindersaurus/edit', { tinder });
   });
 }
 
 //UPDATE
 function tinderUpdate(req, res) {
-  Quote.findByIdAndUpdate(req.params.urlId, req.body.quote, (err, quote) => {
+  Tinder.findByIdAndUpdate(req.params.urlId, req.body.tinder, (err, tinder) => {
     if(err) return res.status(500).send("500: Server Error");
     res.redirect(301, `/tindersaurus/${tinder.id}`);
   });
@@ -47,7 +48,7 @@ function tinderUpdate(req, res) {
 
 //DELETE
 function tinderDelete(req, res) {
-  Quote.findByIdAndRemove(req.params.urlId, (err) => {
+  Tinder.findByIdAndRemove(req.params.urlId, (err) => {
     if(err) return res.status(500).send("500: Server Error");
     res.redirect(301, '/tindersaurus');
   });
