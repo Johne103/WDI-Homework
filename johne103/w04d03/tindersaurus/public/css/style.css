@@ -1,7 +1,9 @@
 body {
-  max-width: 960px;
+  max-width: 100%;
+  height: 700px;
   margin: 0 auto;
-  background-image: url(../images/backgdino.jpeg);
+  background-image: url(../images/frontdino.jpeg);
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
@@ -15,7 +17,7 @@ main {
 
 div.buttons {
   margin-top: 15px;
-}
+
 
 form.delete {
   display: inline;
