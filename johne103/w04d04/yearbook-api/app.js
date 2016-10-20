@@ -6,13 +6,14 @@ const router = require('./config/routes');
 const bodyParser = require('body-parser');
 
 const app = express();
-mongoose.connect('mongodb://localhost/yearbook');
+mongoose.connect('mongodb://localhost/user');
 
 app.use(express.static(`$(__dirname)/public`));
 app.use(morgan("dev"));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
+
 app.use('/', router);
 
 app.listen(port, () => { console.log("Year book");});

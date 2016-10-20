@@ -1,8 +1,13 @@
 const router = require('express').Router();
-const yearbooksController = require('../controllers/yearbooksController.js');
+const usersController = require('../controllers/usersController.js');
 
-router.route('/yearbooks')
-  .get(yearbooksController.index)
-  .post(yearbooksController.create);
+router.route('/users')
+  .get(usersController.index)
+  .post(usersController.create);
+
+router.route('/users/:id')
+  .get(usersController.show)
+  .put(usersController.update)
+  .delete(usersController.delete);
 
 module.exports = router;

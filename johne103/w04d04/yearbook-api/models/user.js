@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const yearbookSchema = mongoose.Schema({
+const userSchema = mongoose.Schema({
   name: { type: String, trim: true },
 	github: { type: String, trim: true },
 	image: { type: String, trim: true },
@@ -9,4 +9,4 @@ const yearbookSchema = mongoose.Schema({
   project_titles: { type: [], }
 });
 
-module.exports = mongoose.model('Yearbook', yearbookSchema);
+module.exports = mongoose.model('User', userSchema);
