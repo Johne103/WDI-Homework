@@ -24,7 +24,7 @@ function carsShow(req, res) {
 function carsUpdate(req, res) {
   Car.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, car) => {
     if(err) return res.status(500).json({ error: err });
-    res.json(dog);
+    res.json(car);
   });
 }
 
