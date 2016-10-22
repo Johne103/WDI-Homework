@@ -9,7 +9,7 @@ function carsIndex(req, res) {
 
 function carsCreate(req, res) {
   Car.create(req.body, (err, car) => {
-    if(err) return res.status(500).json({ error: err });
+    if(err) return res.status(400).json({ error: "400: Invalid data" });
     res.status(201).json(car);
   });
 }
@@ -23,7 +23,7 @@ function carsShow(req, res) {
 
 function carsUpdate(req, res) {
   Car.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, car) => {
-    if(err) return res.status(500).json({ error: err });
+    if(err) return res.status(400).json({ error: "400: Invalid data" });
     res.json(car);
   });
 }
