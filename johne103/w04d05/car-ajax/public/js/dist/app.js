@@ -6,13 +6,13 @@ $(function () {
 });
 
 var addCar = function addCar(car) {
-  $('#cars').prepend('<li>' + car.make + ' - <em>' + car.style + '</em></li>');
+  $('#cars').prepend('<li>' + car.make + ' - <em>' + car.model + ' - <em>' + car.color + '</em></li>');
 };
 
 var getCars = function getCars() {
   $.ajax({
     method: 'GET',
-    url: "mongodb://localhost/car"
+    url: "localhost:8000/cars"
   }).done(function (data) {
     console.log(data);
     $.each(data, function (index, car) {
@@ -26,7 +26,7 @@ var createCar = function createCar(e) {
 
   $.ajax({
     method: 'POST',
-    url: "mongodb://localhost/car",
+    url: "localhost:8000/cars",
     data: $('form').serialize()
   }).done(function (data) {
     addCar(data);

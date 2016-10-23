@@ -4,13 +4,13 @@ $(function() {
 });
 
 const addCar = (car) => {
-  $('#cars').prepend(`<li>${car.make} - <em>${car.style}</em></li>`);
+  $('#cars').prepend(`<li>${car.make} - <em>${car.model} - <em>${car.colorl}</em></li>`);
 };
 
 const getCars = () => {
   $.ajax({
     method: 'GET',
-    url: "mongodb://localhost/car"
+    url: "localhost:8000/cars"
   })
   .done((data) => {
     console.log(data);
@@ -25,7 +25,7 @@ const createCar = (e) => {
 
   $.ajax({
     method: 'POST',
-    url: "https://mongodb://localhost/car",
+    url: "localhost:8000/cars",
     data: $('form').serialize()
   }).done((data) => {
     addCar(data);
