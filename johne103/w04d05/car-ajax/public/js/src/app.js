@@ -10,7 +10,7 @@ const addCar = (car) => {
 const getCars = () => {
   $.ajax({
     method: 'GET',
-    url: "https://ga-doughnuts.herokuapp.com/doughnuts"
+    url: "mongodb://localhost/car"
   })
   .done((data) => {
     console.log(data);
@@ -25,7 +25,7 @@ const createCar = (e) => {
 
   $.ajax({
     method: 'POST',
-    url: "https://ga-doughnuts.herokuapp.com/doughnuts",
+    url: "https://mongodb://localhost/car",
     data: $('form').serialize()
   }).done((data) => {
     addCar(data);
