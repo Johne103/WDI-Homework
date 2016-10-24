@@ -23,7 +23,7 @@ googleMap.mapSetup = function() {
   let canvas = document.getElementById("map-canvas");
 
   let mapOptions = {
-    zoom: 14,
+    zoom: 12,
     center: new google.maps.LatLng(51.5, -0.08),
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
@@ -35,6 +35,8 @@ googleMap.createMarkerForRestaurant = (restaurant) => {
   let latLng = new google.maps.LatLng(restaurant.lat, restaurant.lng);
   let marker = new google.maps.Marker({
     position: latLng,
+    animation: google.maps.Animation.DROP,
+    draggable: true,
     map: googleMap.map,
 });
 
