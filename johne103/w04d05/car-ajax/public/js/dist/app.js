@@ -6,13 +6,13 @@ $(function () {
 });
 
 var addCar = function addCar(car) {
-  $('#cars').prepend('<li>' + car.make + ' - <em>' + car.model + ' - <em>' + car.color + '</em></li>');
+  $('#car').prepend('<li>' + car.make + ' - <em>' + car.model + ' - <em>' + car.color + '</em></li>');
 };
 
 var getCars = function getCars() {
   $.ajax({
     method: 'GET',
-    url: "localhost:8000/cars"
+    url: "http//localhost:8000/cars"
   }).done(function (data) {
     console.log(data);
     $.each(data, function (index, car) {
@@ -32,3 +32,6 @@ var createCar = function createCar(e) {
     addCar(data);
   });
 };
+
+getCars ();
+createCars();
