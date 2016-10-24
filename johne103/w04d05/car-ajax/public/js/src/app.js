@@ -29,5 +29,6 @@ const createCar = (e) => {
     data: $('form').serialize()
   }).done((data) => {
     addCar(data);
+    console.log(data);
   });
 };

@@ -30,5 +30,6 @@ var createCar = function createCar(e) {
     data: $('form').serialize()
   }).done(function (data) {
     addCar(data);
+    console.log(data);
   });
 };
