@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>The Car Configurator</title>
-        <link rel="stylesheet" href="css/style.css">
-        <script src="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet"></script>
-        <script src="js/dist/app.js" charset="utf-8"></script>
-    </head>
-    <body>
-      <h1>Car Configurator</h1>
-      <form id="car">
-        <input type="text" name='make' id="carMake" placeholder="What make of car?" value="BMW">
-        <input type="text" name='model' id="carModel" placeholder="What model of car?" value="1 Series">
-        <select name="color" id="carColor">
-            <option value="Silver">Silver</option>
-            <option value="Black">Black</option>
-            <option value="Red">Red</option>
-            <option value="Blue">Blue</option>
-        </select>
-        <input type="submit" value='Save My Car'>
-      </form>
-    </body>
-    <ul id="cars">
-    </ul>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>The Car Configurator</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <style>
+  @import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One');
+  </style>
+  <script src="js/dist/app.js" charset="utf-8"></script>
+</head>
+<body>
+  <h1>Car Configurator</h1>
+  <form id="car">
+    <input type="text" name='make' id="carMake" placeholder="What make of car?" value="BMW">
+    <input type="text" name='model' id="carModel" placeholder="What model of car?" value="1 Series">
+    <select name="color" id="carColor">
+      <option value="Silver">Silver</option>
+      <option value="Black">Black</option>
+      <option value="Red">Red</option>
+      <option value="Blue">Blue</option>
+    </select>
+    <input type="submit" value='Save My Car'>
+  </form>
+</body>
+<ul id="cars">
+</ul>
 </html>

@@ -4,7 +4,7 @@ $(function() {
 });
 
 const addCar = (car) => {
-  $('#car').prepend(`<li>${car.make} - <em>${car.model} - <em>${car.color}</em></li>`);
+$('#cars').prepend(`<li>${car.make} - <em>${car.model}</em> - <em>${car.color}</em></li>`);
 };
 
 const getCars = () => {

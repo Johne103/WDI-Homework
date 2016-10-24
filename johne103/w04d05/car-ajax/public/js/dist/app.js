@@ -1,18 +1,18 @@
-// 'use strict';
+'use strict';
 
 $(function () {
   getCars();
-  $('form').on('submit', createCar());
+  $('form').on('submit', createCar);
 });
 
 var addCar = function addCar(car) {
-  $('#car').prepend('<li>' + car.make + ' - <em>' + car.model + ' - <em>' + car.color + '</em></li>');
+  $('#cars').prepend('<li>' + car.make + ' - <em>' + car.model + '</em> - <em>' + car.color + '</em></li>');
 };
 
 var getCars = function getCars() {
   $.ajax({
     method: 'GET',
-    url: "http//localhost:8000/cars"
+    url: "http://localhost:8000/cars"
   }).done(function (data) {
     console.log(data);
     $.each(data, function (index, car) {
@@ -26,12 +26,9 @@ var createCar = function createCar(e) {
 
   $.ajax({
     method: 'POST',
-    url: "localhost:8000/cars",
+    url: "http://localhost:8000/cars",
     data: $('form').serialize()
   }).done(function (data) {
     addCar(data);
   });
 };
-
-getCars ();
-createCars();
