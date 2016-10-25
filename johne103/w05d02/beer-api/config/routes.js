@@ -8,7 +8,7 @@ const secret = require('./tokens.js').secret;
 
 function secureRoute(req, res, next) {
   if(!req.headers.authorization) return res.status(401).json({ message: "Unauthorized" });
-  console.log('taken to be set');
+  console.log('token to be set');
   let token = req.headers.authorization.replace('Bearer ', '');
   console.log('token set');
 
@@ -19,6 +19,11 @@ function secureRoute(req, res, next) {
     next();
   });
 }
+
+router.route('/beers')
+  .all(secureRoute)
+  .get(beersController.index)
+  .post(beersController.create);
 
 router.route('/register')
 .post(authController.register);
