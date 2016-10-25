@@ -7,16 +7,16 @@ googleMap.getRestaurant = function () {
   .done(this.loopThroughRestaurants);
 };
 
-googleMap.addInfoWindowForRestaurant = function (restaurant, marker) {
-  google.maps.event.addListener(marker, 'click',() => {
-    if(this.infowindow) {
-      this.infowindow.close();
-    }
-    this.infowindow = new google.maps.InfoWindow({
-    content: `<img src="${restaurant.image}"><p>${restaurant.name}</p><small>${restaurant.description}</small>`
+  googleMap.addInfoWindowForRestaurant = function (restaurant, marker) {
+    google.maps.event.addListener(marker, 'click',() => {
+      if(this.infowindow) {
+        this.infowindow.close();
+      }
+      this.infowindow = new google.maps.InfoWindow({
+      content: `<img src="${restaurant.image}"><p>${restaurant.name}</p><small>${restaurant.description}</small>`
+    });
+    this.infowindow.open(this.map, marker);
   });
-  this.infowindow.open(this.map, marker);
-});
 };
 
 googleMap.mapSetup = function() {
