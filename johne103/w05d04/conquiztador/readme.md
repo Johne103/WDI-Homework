@@ -15,9 +15,9 @@ This second project will **build a full-stack RESTful application** that include
 
 This solution will be **built using an Express application** that has a **Mongo** database using the **Mongoose ORM**.
 
-The solution will be developed by a team of four using Git. 
+The solution will be developed by a team of four using Git in support of version control and output coordination. 
 
-The solution will be developed with the use of tools such as Trello to support project planning and output coordination and wireframes before the devlepment of user stories defining what users will do with the app. The outcomes and scope of requirements will be prioritised using the MoSCoW technique.
+The solution will be developed with the use of tools such as Trello to support project planning and task coordination and wireframes before the devlepment of user stories defining what users will do with the app. The outcomes and scope of requirements will be prioritised using the MoSCoW technique.
 
 
 ---
@@ -58,22 +58,36 @@ The app MUST:
 
 ---
 
-### Outline of Application Requirements
+### Outline of Application Requirements and Prioritisation
+
+__MUST HAVE Application Requirements:__
 
 * Single player game. (MUST HAVE)
-* At start country to conquer is selected randomly. (SHOULD HAVE)
 * On subsequent turn, player selects next country to conquer. (MUST HAVE)
 * Player to conquer country and gain territory based on correct answer to questions about country. (MUST HAVE)
 * For small countries 5 questions, medium 10 questions,large 40 questions to be answered rounds of 4. (MUST HAVE)
-* Questions will start with facts such as flag, population range etc. and gain increasing difficulty. (SHOULD HAVE)
+* Questions will start with facts such as flag, population range etc. and gain increasing difficulty. (MUST HAVE)
 * Player will accumulate points for each correct answer. (MUST HAVE)
 * Correct answer to question by player will be indicated by flag pinned within country representing player (MUST HAVE)
 * Player answering all questionss correctly will take control of country and gain territory. (MUST HAVE)
 * Player unable to answer all questions correctly will accumulate points but will not take control of country, but can move on to another country to try to take control by correctly answering all questions. (MUST HAVE)
 * Player score and countries conquered will be displayed (MUST HAVE)
+
+__SHOULD HAVE Application Requirements:__
+
+* At start country to conquer is selected randomly. (SHOULD HAVE)
 * Option for two player game on same device (SHOULD HAVE)
+
+__COULD HAVE Application Requirements:__
+
 * Colour of country respresentation on map to change colour to indicate conquered country for each player. (COULD HAVE)
-* Option for two player game on seperate devices (COULD HAVE) 
+* Option for two player game on seperate devices (COULD HAVE)
+* Timer for answering each question. (COULD HAVE) 
+
+__WON'T HAVE Application Requirements (Out of Scope):__
+
+* To be determined.
+
 
 ---
 
