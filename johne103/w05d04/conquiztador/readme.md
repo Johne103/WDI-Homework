@@ -24,7 +24,7 @@ The solution will be developed with the use of tools such as Trello to support p
 
 ### Technical Requirements
 
-Your app must:
+The app MUST:
 
 * **Have at _least_ 2 models** – one representing a user and one that represents the main resource of your app, e.g. Restaurants
 * **The app should include authentication** - with encrypted passwords & an authorization flow
@@ -58,19 +58,26 @@ Your app must:
 
 ---
 
-### Proposed Solution
+### Outline of Application Requirements
 
 * Single player game. (MUST HAVE)
-* Player to select country to conquer based on correct answer to questions about country
-* For small countries 5 questions, medium 10 questions,large 40 questions to be answered rounds of 4.
-* Player answering all questionss correctly will control terratory and accumulate the points.
-* Player unable to answer all questions correctly will accumulate points but will not take control of terratory, but can move on to another country to try to take control by correctly answering all questions.
+* At start country to conquer is selected randomly. (SHOULD HAVE)
+* On subsequent turn, player selects next country to conquer. (MUST HAVE)
+* Player to conquer country and gain territory based on correct answer to questions about country. (MUST HAVE)
+* For small countries 5 questions, medium 10 questions,large 40 questions to be answered rounds of 4. (MUST HAVE)
+* Questions will start with facts such as flag, population range etc. and gain increasing difficulty. (SHOULD HAVE)
+* Player will accumulate points for each correct answer. (MUST HAVE)
+* Correct answer to question by player will be indicated by flag pinned within country representing player (MUST HAVE)
+* Player answering all questionss correctly will take control of country and gain territory. (MUST HAVE)
+* Player unable to answer all questions correctly will accumulate points but will not take control of country, but can move on to another country to try to take control by correctly answering all questions. (MUST HAVE)
+* Player score and countries conquered will be displayed (MUST HAVE)
 * Option for two player game on same device (SHOULD HAVE)
+* Colour of country respresentation on map to change colour to indicate conquered country for each player. (COULD HAVE)
 * Option for two player game on seperate devices (COULD HAVE) 
 
 ---
 
-### Project Feedback + Evaluation
+### Project Feedback + Evaluation - Key measures to be considered
 
 * __Project Workflow__: Did you complete the user stories, wireframes, task tracking, and/or ERDs, as specified above? Did you use source control as expected for the phase of the program you’re in (detailed above)?
 
