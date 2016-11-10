@@ -17,6 +17,9 @@ function CriminalsController($http) {
         console.log(res.data);
         criminals.all.push(res.data);
         criminals.newCriminal = {};
+
+        criminals.form.$setPristine();
+        criminals.form.$setUntouched();
       })
     .catch(() => {
       console.log('Something went wrong!');
@@ -38,7 +41,6 @@ function CriminalsController($http) {
         criminals.all.splice($index, 1);
       });
   }
-
-
+  
   getCriminals();
 }
