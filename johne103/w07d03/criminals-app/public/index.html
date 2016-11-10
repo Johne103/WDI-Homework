@@ -16,7 +16,7 @@
   <section ng-controller="CriminalsController as criminals">
     <ul id="criminals">
       <li ng-repeat="criminal in criminals.all">
-        <strong>{{criminal.name}}</strong> <em>{{criminal.location}},</em> <span class="status dead">{{criminal.status}}</span>
+        <strong>{{criminal.name}}</strong> <em>{{criminal.location}},</em> <span class="status" ng-class="criminal.status">{{criminal.status}}</span>
         <button ng-click="criminals.deleteCriminal(criminal._id, $index)">Remove Criminal</button>
       </li>
     </ul>
@@ -34,7 +34,7 @@
       </div>
       <div>
         <label for="newCriminal-location">Location:</label>
-        <input type="text" id="newCriminal-location" ng-model="criminals.newCriminal.location" name="location" placeholder="Reichenbach Falls, CH" required minlength="5" maxlength="20">
+        <input type="text" id="newCriminal-location" ng-model="criminals.newCriminal.location" name="location" placeholder="Reichenbach Falls, CH" required minlength="2" maxlength="20">
 
         <div ng-messages="criminals.form.location.$error" ng-show="criminals.form.location.$dirty">
           <p ng-message="required">Location is required</p>
@@ -44,12 +44,14 @@
       </div>
       <div>
         <label for="newCriminal-status">Status:</label>
-        <select id="newCriminal-status" name="status">
+        <select id="newCriminal-status" ng-model="criminals.newCriminal.status" name="status">
           <option value="" disabled>- - Please Select One - -</option>
           <option value="alive">Alive</option>
           <option value="dead">Dead</option>
           <option value="unknown" selected>Unknown</option>
         </select>
+        <div ng-messages="criminals.form.status.$error" ng-show="criminals.form.status.$dirty">
+            <p ng-message="required">Status is required</p>
       </div>
       <div>
         <input type="submit" value="Add Criminal" ng-disabled="criminals.form.$invalid">
