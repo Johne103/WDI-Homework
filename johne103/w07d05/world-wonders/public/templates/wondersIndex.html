@@ -1,0 +1,12 @@
+<section>
+  <ul class="row">
+    <li ng-repeat="wonder in wondersIndex.all" class="four columns">
+      <a ui-sref="wondersShow({ id: wonder._id })">
+        <img ng-src="{{ wonder.posterImage }}" class="u-max-full-width">
+        <h2>{{ wonder.title }}</h2>
+        <h4>{{ wonder.country }}</h4>
+        <p>{{ wonder.location }}</p>
+      </a>
+    </li>
+  </ul>
+</section>
