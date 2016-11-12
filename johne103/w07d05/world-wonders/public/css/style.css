@@ -1,5 +1,14 @@
 img {
   max-width: 500px;
+  max-height: 400px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
 }
 
 ul {
