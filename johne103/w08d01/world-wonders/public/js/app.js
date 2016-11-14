@@ -50,4 +50,8 @@ function Auth($authProvider) {
   $authProvider.signupUrl = '/register';
 
   $authProvider.tokenPrefix = '';
+
+  $authProvider.github({
+    clientId: '1ce21c481fa0a5dc7af0'
+  });
 }
