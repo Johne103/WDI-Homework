@@ -1,10 +1,19 @@
 img {
+  display: inline-block;
   max-width: 500px;
-  max-height: 400px;
+  max-height: 300px;
+  border-radius: 10px;
+  margin-left: auto;
+}
+
+h1 {
+  font-size: 50px;
+  font-family: 'Uncial Antiqua', cursive;
 }
 
 h2 {
   font-size: 20px;
+  font-family: 'Uncial Antiqua', cursive;
 }
 
 h4 {
