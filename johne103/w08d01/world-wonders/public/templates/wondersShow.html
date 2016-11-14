@@ -1,0 +1,11 @@
+<section>
+  <img ng-src="{{ wondersShow.wonder.posterImage }}">
+  <h2>{{ wondersShow.wonder.title }}</h2>
+  <h4>{{ wondersShow.wonder.country }}</h4>
+  <p>{{ wondersShow.wonder.location }}</p>
+  <p>{{ wondersShow.wonder.info }}</p>
+
+  <a ng-if="main.isLoggedIn()" ui-sref="wondersEdit({ id: wondersShow.wonder._id })" class="button">Edit</a>
+  <button ng-if="main.isLoggedIn()" ng-click="wondersShow.delete()">Delete</button>
+
+</section>
