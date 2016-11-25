@@ -1,4 +1,4 @@
-p "Press c for the math calculator, or w for your weight on moon calculator,  or m for the mortgage calculator, or s for the stamp duty calculator"
+p "Press c for the math calculator, or w for your weight on moon calculator,  or m for the mortgage calculator, or s for the stamp duty calculator or t for the calculator for sugar tax"
 
 user_choice = gets.chomp
 
@@ -80,7 +80,7 @@ elsif user_choice == "m"
   mortgage_continue = "y"
 
   while mortgage_continue == "y"
-    puts "Please enter the principal amount in £"
+    puts "Please enter the value of the property in £"
     principal = gets.to_f
     puts "Please enter the annual interest rate"
     interest_rate = gets.to_f
@@ -88,15 +88,13 @@ elsif user_choice == "m"
     number_of_payments = gets.to_f
 
     number_of_payments = number_of_payments * 12
-    puts "Period over which payments will be made will equal: #{number_of_payments} months"
+    puts "Period over which payments will be made will equal: #{number_of_payments.to_i} months"
 
     interest_rate = (interest_rate/12)/100
 
     interest_rate_plus_one = interest_rate + 1
-    puts "Monthly interest rate is #{interest_rate_plus_one}"
 
     compound_rate_payment = interest_rate_plus_one ** number_of_payments
-    puts "Compound rate is #{compound_rate_payment}"
 
     rate_payment_minus_one = compound_rate_payment - 1
 
@@ -105,7 +103,10 @@ elsif user_choice == "m"
     numerator_denominator_calc = rate_payment_times_rate/rate_payment_minus_one
 
     monthly_payments = principal * numerator_denominator_calc
-    puts "Monthly payments will be: £ #{monthly_payments}"
+    puts "Monthly payments will be: £ #{monthly_payments.round(2)}"
+
+    puts "Do you wish to perform another mortgage calculation? y/n"
+    mortgage_continue = gets.chomp
 
   end
 
@@ -128,7 +129,29 @@ elsif user_choice == "s"
     stampduty_continue = gets.chomp
   end
 
-end
+elsif user_choice == "t"
 
+  sugartax_continue = "y"
+
+  while sugartax_continue == "y"
+    puts "Please enter the volume of the drink in millilitres"
+    vol_of_drink = gets.to_f
+    puts "Please enter the total sugar content in grams per 100 millilitres"
+    grams_per_100_mltr = gets.to_f
+
+    if grams_per_100_mltr <= 5
+      sugartax = 0
+    elsif grams_per_100_mltr > 5 && grams_per_100_mltr <= 8
+      sugartax = vol_of_drink * 0.00018
+    else
+      sugartax = vol_of_drink * 0.00024
+    end
+    puts "Sugar tax paid for drink is #{sugartax.round(4)}p"
+    puts "Do you wish to perform another sugartax calculation? y/n"
+    sugartax_continue = gets.chomp
+
+  end
+
+end
 
 exit
