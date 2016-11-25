@@ -1,4 +1,5 @@
-p "Press c for the calculator, w for your weight on the moon"
+p "Press c for the math calculator, or w for your weight on moon calculator,  or m for the mortgage calculator, or s for the stamp duty calculator"
+
 user_choice = gets.chomp
 
 if user_choice == "c"
@@ -73,5 +74,61 @@ elsif user_choice == "w"
 
   end
   p "Thanks for using this weight on moon calculator"
+
+elsif user_choice == "m"
+
+  mortgage_continue = "y"
+
+  while mortgage_continue == "y"
+    puts "Please enter the principal amount in £"
+    principal = gets.to_f
+    puts "Please enter the annual interest rate"
+    interest_rate = gets.to_f
+    puts "Please enter the number of years over which payments will be made"
+    number_of_payments = gets.to_f
+
+    number_of_payments = number_of_payments * 12
+    puts "Period over which payments will be made will equal: #{number_of_payments} months"
+
+    interest_rate = (interest_rate/12)/100
+
+    interest_rate_plus_one = interest_rate + 1
+    puts "Monthly interest rate is #{interest_rate_plus_one}"
+
+    compound_rate_payment = interest_rate_plus_one ** number_of_payments
+    puts "Compound rate is #{compound_rate_payment}"
+
+    rate_payment_minus_one = compound_rate_payment - 1
+
+    rate_payment_times_rate = interest_rate * compound_rate_payment
+
+    numerator_denominator_calc = rate_payment_times_rate/rate_payment_minus_one
+
+    monthly_payments = principal * numerator_denominator_calc
+    puts "Monthly payments will be: £ #{monthly_payments}"
+
+  end
+
+elsif user_choice == "s"
+
+  stampduty_continue = "y"
+
+  while stampduty_continue == "y"
+    puts "Please enter the price of the property in £"
+    property_price = gets.to_f
+
+    if property_price < 125000
+      puts "Stamp duty will be £0"
+    elsif property_price >= 125000 && property_price <= 250000
+      puts "Stamp duty will be £2,500"
+    else
+      puts "Stamp duty wil be £5,000"
+    end
+    puts "Do you wish to perform another stampduty calculation? y/n"
+    stampduty_continue = gets.chomp
+  end
+
 end
+
+
 exit
