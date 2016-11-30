@@ -68,6 +68,6 @@ Lucky for us, she's getting cocky. She left us a note, and I'm sure she thinks s
 We're counting on you, gumshoe. Find out where she's headed, send us the info, and we'll be sure to meet her at the gates with bells on.
 
 ```SQL
--- YOUR SQL QUERY GOES HERE
+SELECT name, population FROM country WHERE continent = 'Africa' ORDER BY population;
 ```
-**Answer:**
+**Zambia 9169000:**
