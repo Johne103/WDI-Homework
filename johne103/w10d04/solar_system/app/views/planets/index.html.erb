@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Planets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Image</th>
+      <th>Description</th>
+      <th>Radius</th>
+      <th>Daylength</th>
+      <th>Mass</th>
+      <th>Gravity</th>
+      <th>Surfacearea</th>
+      <th>Numberofmoons</th>
+      <th>Moons</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @planets.each do |planet| %>
+      <tr>
+        <td><%= planet.name %></td>
+        <td><%= image_tag planet.image, width: 200 %></td>
+        <td><%= planet.description %></td>
+        <td><%= planet.radius %></td>
+        <td><%= planet.daylength %></td>
+        <td><%= planet.mass %></td>
+        <td><%= planet.gravity %></td>
+        <td><%= planet.surfacearea %></td>
+        <td><%= planet.numberofmoons %></td>
+        <td><%= planet.moons %></td>
+        <td><%= link_to 'Show', planet %></td>
+        <% if logged_in? %>
+          <td><%= link_to 'Edit', edit_planet_path(planet) %></td>
+          <td><%= link_to 'Destroy', planet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Planet', new_planet_path %>

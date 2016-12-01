@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @planet.name %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @planet.image, width: 200 %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @planet.description %>
+</p>
+
+<p>
+  <strong>Radius:</strong>
+  <%= @planet.radius %>
+</p>
+
+<p>
+  <strong>Daylength:</strong>
+  <%= @planet.daylength %>
+</p>
+
+<p>
+  <strong>Mass:</strong>
+  <%= @planet.mass %>
+</p>
+
+<p>
+  <strong>Gravity:</strong>
+  <%= @planet.gravity %>
+</p>
+
+<p>
+  <strong>Surfacearea:</strong>
+  <%= @planet.surfacearea %>
+</p>
+
+<p>
+  <strong>Numberofmoons:</strong>
+  <%= @planet.numberofmoons %>
+</p>
+
+<p>
+  <strong>Moons:</strong>
+  <%= @planet.moons %>
+</p>
+
+<% if logged_in? %>
+  <%= link_to 'Edit', edit_planet_path(@planet) %> |
+<% end %>
+
+<%= link_to 'Back', planets_path %>

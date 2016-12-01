@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  image: MyString
+  description: MyText
+  radius: 1.5
+  daylength: 1
+  mass: 1.5
+  gravity: 1.5
+  surfacearea: 1.5
+  numberofmoons: 1
+  moons: MyString
+
+two:
+  name: MyString
+  image: MyString
+  description: MyText
+  radius: 1.5
+  daylength: 1
+  mass: 1.5
+  gravity: 1.5
+  surfacearea: 1.5
+  numberofmoons: 1
+  moons: MyString

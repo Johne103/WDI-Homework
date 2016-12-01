@@ -1,0 +1,67 @@
+<%= form_for(planet) do |f| %>
+  <% if planet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(planet.errors.count, "error") %> prohibited this planet from being saved:</h2>
+
+      <ul>
+      <% planet.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.text_field :image %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :radius %>
+    <%= f.text_field :radius %>
+  </div>
+
+  <div class="field">
+    <%= f.label :daylength %>
+    <%= f.number_field :daylength %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mass %>
+    <%= f.text_field :mass %>
+  </div>
+
+  <div class="field">
+    <%= f.label :gravity %>
+    <%= f.text_field :gravity %>
+  </div>
+
+  <div class="field">
+    <%= f.label :surfacearea %>
+    <%= f.text_field :surfacearea %>
+  </div>
+
+  <div class="field">
+    <%= f.label :numberofmoons %>
+    <%= f.number_field :numberofmoons %>
+  </div>
+
+  <div class="field">
+    <%= f.label :moons %>
+    <%= f.text_field :moons %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
