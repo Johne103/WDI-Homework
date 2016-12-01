@@ -15,7 +15,7 @@
     <% @continents.each do |continent| %>
       <tr>
         <td><%= continent.name %></td>
-        <td><%= continent.country %></td>
+        <td><%= continent.country.name %></td>
         <td><%= link_to 'Show', continent %></td>
         <td><%= link_to 'Edit', edit_continent_path(continent) %></td>
         <td><%= link_to 'Destroy', continent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
