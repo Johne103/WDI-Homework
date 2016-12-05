@@ -1,0 +1,18 @@
+<nav class="navbar navbar-light bg-faded">
+  <div class="container">
+    <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button>
+    <div class="collapse navbar-toggleable-md" id="navbarResponsive">
+      <%= link_to "Home", root_path, class: 'navbar-brand' %>
+      <ul class="nav navbar-nav">
+        <% if logged_in? %>
+          <li class="nav-item"><a class='nav-link' href="#">Hello, <%= current_user.username %></a></li>
+          <li class="nav-item"><%= link_to 'Logout', logout_path, method: :delete, data: {confirm: 'Are you sure?'}, class: 'nav-link' %></li>
+          <li class="nav-item"><%= link_to "Wishlist", wishlists_path, class: 'nav-link' %></li>
+        <% else %>
+          <li class="nav-item"><%= link_to "Register", register_path, class: 'nav-link' %></li>
+          <li class="nav-item"><%= link_to "Login", login_path, class: 'nav-link' %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>

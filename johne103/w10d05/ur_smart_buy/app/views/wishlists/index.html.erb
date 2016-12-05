@@ -16,9 +16,9 @@
       <tr>
         <td><%= wishlist.title %></td>
         <td><%= wishlist.user.username %></td>
-        <td><%= link_to 'Show', wishlist %></td>
-        <td><%= link_to 'Edit', edit_wishlist_path(wishlist) %></td>
-        <td><%= link_to 'Destroy', wishlist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', wishlist, class:"btn btn-primary" %></td>
+        <td><%= link_to 'Edit', edit_wishlist_path(wishlist), class:"btn btn-primary" %></td>
+        <td><%= link_to 'Destroy', wishlist, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-primary" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Wishlist', new_wishlist_path %>
+<%= link_to 'New Wishlist', new_wishlist_path, class:"btn btn-primary" %>
