@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @product.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @product.description %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @product.image %>
+</p>
+
+<p>
+  <strong>If free:</strong>
+  <%= @product.if_free %>
+</p>
+
+<p>
+  <strong>Original price:</strong>
+  <%= @product.original_price %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @product.price %>
+</p>
+
+<p>
+  <strong>Savings:</strong>
+  <%= @product.savings %>
+</p>
+
+<p>
+  <strong>Percent discount:</strong>
+  <%= @product.percent_discount %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @product.category %>
+</p>
+
+<% if logged_in? %>
+  <%= link_to 'Edit', edit_product_path(@product) %>
+<% end %> |
+<%= link_to 'Back', products_path %>
